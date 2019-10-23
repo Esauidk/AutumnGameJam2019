@@ -56,7 +56,7 @@ public class TitleScreen : MonoBehaviour
         if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")){
             selectedBut = true;
         }
-        if(selected == 1 && selectedBut == true){
+        if(selectedBut == true){
             titlebar.position = new Vector3(titlebar.position.x,Mathf.Lerp(titlebar.position.y,1660,.05f), titlebar.position.z);
             if(titlebar.position.y > 500){
                 instructions.position = new Vector3(instructions.position.x,Mathf.Lerp(instructions.position.y,1660,.02f), instructions.position.z);
@@ -65,7 +65,22 @@ public class TitleScreen : MonoBehaviour
                 StartBut.position = new Vector3(StartBut.position.x,Mathf.Lerp(StartBut.position.y,1660,.02f), StartBut.position.z);
             }
             if(StartBut.position.y > 500){
-                fade.color = Color.Lerp(fade.color, new Color(0,0,0,1),.05f);
+                if(selected == 1){
+                    fade.color = Color.Lerp(fade.color, new Color(0,0,0,1),.05f);
+                }else if(selected == 2){
+                    GameObject box = GameObject.FindWithTag("InstructionBox");
+                    if(box.GetComponent<RectTransform>().position.x < 998){
+                        box.GetComponent<RectTransform>().position = Vector3.Lerp(box.GetComponent<RectTransform>().position, new Vector3(1000,500,0),.05f);
+                    }else{
+                        Debug.Log("Done");
+                        box.GetComponent<RectTransform>().localScale = Vector3.Lerp(box.GetComponent<RectTransform>().localScale, new Vector3(10.91065f,4.703326f,2.2671f),.05f);
+                        if(box.GetComponent<RectTransform>().localScale.x > 10 && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2"))){
+                            selected = 1;
+                        }
+                        
+                    }
+                }
+                
             }
             
             

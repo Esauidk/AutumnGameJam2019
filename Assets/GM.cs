@@ -21,13 +21,17 @@ public class GM : MonoBehaviour
     bool finish;
     bool transitionComplete;
     GameObject[] screenfade;
+    GameObject[] fireKeys;
     bool restart;
+    bool grow;
+    bool keyalive = true;
 
     // Start is called before the first frame update
     void Start()
     {
         mainref = Main;
         screenfade = GameObject.FindGameObjectsWithTag("ScreenFade");
+        fireKeys = GameObject.FindGameObjectsWithTag("FireKey");
     }
 
     // Update is called once per frame
@@ -39,6 +43,25 @@ public class GM : MonoBehaviour
                     screen.GetComponent<Image>().color = Color.Lerp(screen.GetComponent<Image>().color, new Color(0,0,0,0),.05f);
                 }else{
                     transitionComplete = true;
+                }
+            }
+        }
+        if(transitionComplete == true && keyalive == true){
+            foreach(GameObject key in fireKeys){
+                if(key.GetComponent<Image>().color.a < .98f){
+                    key.GetComponent<Image>().color = Color.Lerp(key.GetComponent<Image>().color, new Color(1,1,1,1),.05f);
+                }else{
+                    if(key.GetComponent<RectTransform>().localScale.x < 1.05f && grow == false){
+                        grow = true;
+                    }
+                    if(key.GetComponent<RectTransform>().localScale.x > 1.2f && grow == true){
+                        grow = false;
+                    }
+                    if(grow == true){
+                        key.GetComponent<RectTransform>().localScale = Vector3.Lerp(key.GetComponent<RectTransform>().localScale, new Vector3(1.217f,1.217f,1.217f),.05f);
+                    }else{
+                        key.GetComponent<RectTransform>().localScale = Vector3.Lerp(key.GetComponent<RectTransform>().localScale, new Vector3(1f,1f,1f),.05f);
+                    }
                 }
             }
         }
@@ -73,6 +96,10 @@ public class GM : MonoBehaviour
         if(winner!=0 && finish == false){
             Destroy(Left.gameObject);
             Destroy(Right.gameObject);
+            foreach(GameObject key in fireKeys){
+                Destroy(key);
+            }
+            keyalive = false;
             Destroy(Main.GetComponent<Camera_Follow>());
             finish = true;
         }else if(winner!=0 && (Input.GetButtonDown("Fire1")||Input.GetButtonDown("Fire2")) && DestroyTower.ready == true){

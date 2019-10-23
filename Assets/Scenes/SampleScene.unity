@@ -581,6 +581,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2playerCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2298655186135594402, guid: 3fd8e4b19c997d34db9ed84ac6a22ddb,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298655186135594402, guid: 3fd8e4b19c997d34db9ed84ac6a22ddb,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298655186135594402, guid: 3fd8e4b19c997d34db9ed84ac6a22ddb,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2298655187000885595, guid: 3fd8e4b19c997d34db9ed84ac6a22ddb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -942,6 +957,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1playerCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4831514111190907096, guid: 301ccefdb8f6102418186eef50b6648d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831514111190907096, guid: 301ccefdb8f6102418186eef50b6648d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.93948025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831514111190907096, guid: 301ccefdb8f6102418186eef50b6648d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.93948025
+      objectReference: {fileID: 0}
     - target: {fileID: 4831514111650411742, guid: 301ccefdb8f6102418186eef50b6648d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1061,6 +1091,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 220.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831514111334300686, guid: 301ccefdb8f6102418186eef50b6648d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831514109819902299, guid: 301ccefdb8f6102418186eef50b6648d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7710385449532935410, guid: 301ccefdb8f6102418186eef50b6648d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999130652150024298, guid: 301ccefdb8f6102418186eef50b6648d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886326321817915356, guid: 301ccefdb8f6102418186eef50b6648d,
+        type: 3}
+      propertyPath: m_TagString
+      value: FireKey
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 301ccefdb8f6102418186eef50b6648d, type: 3}
@@ -1209,10 +1264,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8910615044743331363, guid: 38446d49ed3596745a96f557feca3aac,
+    - target: {fileID: 8284472790783360816, guid: 38446d49ed3596745a96f557feca3aac,
         type: 3}
-      propertyPath: m_Text
-      value: Press Any Fire To play again
+      propertyPath: m_Name
+      value: MainCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 8124234532599492783, guid: 38446d49ed3596745a96f557feca3aac,
         type: 3}
@@ -1234,6 +1289,11 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.4392157
       objectReference: {fileID: 0}
+    - target: {fileID: 8910615044743331363, guid: 38446d49ed3596745a96f557feca3aac,
+        type: 3}
+      propertyPath: m_Text
+      value: Press Any Fire To play again
+      objectReference: {fileID: 0}
     - target: {fileID: 4572195360112378680, guid: 38446d49ed3596745a96f557feca3aac,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -1253,11 +1313,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8284472790783360816, guid: 38446d49ed3596745a96f557feca3aac,
-        type: 3}
-      propertyPath: m_Name
-      value: MainCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 8284472790783360828, guid: 38446d49ed3596745a96f557feca3aac,
         type: 3}
